@@ -5,13 +5,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
-      - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@v1.8.1
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          TARGET_REPO: JustSkiv/gogetpodcast-build
-          TARGET_BRANCH: main
-          BUILD_SCRIPT: yarn && yarn build
-          BUILD_DIR: src/.vuepress/dist/
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build VuePress site
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          external_repository: JustSkiv/gogetpodcast-build
+          publish_branch: main
+          publish_dir: ./src/.vuepress/dist
