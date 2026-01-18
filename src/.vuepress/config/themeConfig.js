@@ -43,5 +43,5 @@ module.exports = {
     //   link: '/rss.xml'
     // },
   ],
-  copyright: '© 2022 👾️ <a target="_blank" href="https://tuzov.su/">Nikolay Tuzov</a>'
+  copyright: '© 2026 👾️ <a target="_blank" href="https://tuzov.su/">Nikolay Tuzov</a>'
 }
