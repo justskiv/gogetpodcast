@@ -87,10 +87,10 @@ module.exports = {
         }
       ],
       sitemap: {
-        hostname: 'http://blog.tuzov.su/'
+        hostname: 'http://tuzov.dev/'
       },
       feed: {
-        canonical_base: 'http://blog.tuzov.su/',
+        canonical_base: 'http://tuzov.dev/',
       },
       // comment: {
       //   service: 'vssue',
