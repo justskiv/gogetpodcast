@@ -1,6 +1,7 @@
 ---
 title: "Выпуск #19: Как разработчику выжать максимум из LLM?"
 date: 2026-01-16
+permalink: /ep/19-llm-for-dev
 category: podcast
 excludeRelatedPost: true
 tags:

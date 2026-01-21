@@ -1,6 +1,7 @@
 ---
 title: "Выпуск #20: Почему ты учишься неправильно? Гайд по самообразованию и книгам"
 date: 2026-01-20
+permalink: /ep/20-self-learning
 category: podcast
 excludeRelatedPost: true
 tags:
